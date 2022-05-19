@@ -34,7 +34,6 @@ white = (255, 255, 255)
 blue = (0, 0, 255)
 
 # load images
-sun_img = pygame.image.load('D:/img/sun.png')
 bg_img = pygame.image.load('D:/img/sky.png')
 restart_img = pygame.image.load('D:/img/restart_btn.png')
 start_img = pygame.image.load('D:/img/start_btn.png')
@@ -400,7 +399,6 @@ while run:
    clock.tick(fps)
 
    screen.blit(bg_img, (0, 0))
-   screen.blit(sun_img, (100, 100))
 
    if main_menu == True:
        if exit_button.draw():
