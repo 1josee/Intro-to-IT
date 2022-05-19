@@ -34,6 +34,7 @@ white = (255, 255, 255)
 blue = (0, 0, 255)
 
 # load images
+sun_img = pygame.image.load('D:/img/sun.png')
 bg_img = pygame.image.load('D:/img/sky.png')
 restart_img = pygame.image.load('D:/img/restart_btn.png')
 start_img = pygame.image.load('D:/img/start_btn.png')
@@ -41,8 +42,8 @@ exit_img = pygame.image.load('D:/img/exit_btn.png')
 
 # load sounds
 pygame.mixer.music.load('D:/img/music.mp3')
-pygame.mixer.music.play(-1, 0.0, 5000)
-pygame.mixer.music.set_volume(0.1)     
+pygame.mixer.music.play(-1, 0.5, 5000)
+pygame.mixer.music.set_volume(0.1)
 coin_fx = pygame.mixer.Sound('D:/img/coin.wav')
 coin_fx.set_volume(0.5)
 jump_fx = pygame.mixer.Sound('D:/img/jump.wav')
@@ -232,7 +233,7 @@ class Player():
        self.counter = 0
        for num in range(1, 5):
            img_right = pygame.image.load(f'D:\img/guy{num}.png')
-           img_right = pygame.transform.scale(img_right, (40, 80))
+           img_right = pygame.transform.scale(img_right, (40, 60))
            img_left = pygame.transform.flip(img_right, True, False)
            self.images_right.append(img_right)
            self.images_left.append(img_left)
@@ -398,7 +399,8 @@ while run:
 
    clock.tick(fps)
 
-   screen.blit(bg_img, (0, 0)
+   screen.blit(bg_img, (0, 0))
+   screen.blit(sun_img, (100, 100))
 
    if main_menu == True:
        if exit_button.draw():
@@ -460,7 +462,6 @@ while run:
    pygame.display.update()
 
 pygame.quit()
-
 
 
 
