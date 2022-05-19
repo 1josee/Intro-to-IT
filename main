@@ -42,6 +42,7 @@ exit_img = pygame.image.load('D:/img/exit_btn.png')
 # load sounds
 pygame.mixer.music.load('D:/img/music.mp3')
 pygame.mixer.music.play(-1, 0.0, 5000)
+pygame.mixer.music.set_volume(0.1)     
 coin_fx = pygame.mixer.Sound('D:/img/coin.wav')
 coin_fx.set_volume(0.5)
 jump_fx = pygame.mixer.Sound('D:/img/jump.wav')
